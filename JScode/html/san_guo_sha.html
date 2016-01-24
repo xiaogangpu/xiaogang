@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>仿游戏《英雄联盟》水晶切换效果</title>
+<style type="text/css">
+    body,div,ul,li,h4,p{ margin:0;padding:0;}
+    h1{ padding:10px;margin:0;text-align:left;background:#ccc;}
+    body{ font:12px arial;color:#000;background:  #D1BBFF;}
+    #box{ position:relative;width:754px;height:292px;margin:120px auto 0;background:url(../img/1.jpg);border-radius:40px; }
+    #box ul{ position:relative;width:754px;height:292px;}
+    #box li{ position:absolute;border:2px solid #9955FF;list-style:none;width:0;height:0;top:146px;left:377px;background:#CCBBFF;z-index:0;cursor:pointer;overflow:hidden;}
+    #box li img{ width:100%;height:100%;}
+    #box li div{ position:absolute;bottom:-100px;width:100%;height:100px;filter:alpha(opacity=70);opacity:0.7;}
+    #box li div h4{ margin:0 10px;font:12px/24px arial;border-bottom:2px #ccc solid;}
+    #box li div h4 span{ color:red;margin-left:12px;}
+    #box li div p{ margin:5px 10px 0;}
+    #box .prev, #box .next{ position:absolute;top:50%;width:45px;height:40px;margin-top:-40px;cursor:pointer;background:#FFFF33;border-radius:29px;}
+    #box .prev{ left:-60px;}             /*超边脱出*/
+    #box .next{ right:-60px;}
+</style>
+<script type="text/javascript">
+    function ZoomPic ()//构造器
+    {
+        this.initialize.apply(this,arguments);//公有对象实例
+    }
+    ZoomPic.prototype =
+    {
+        initialize : function (id)    //仿照面向对象的方法，其中带入过程式描述，请见谅
+        {
+            var _that = this;
+            this.wrap = typeof id === "string" ? document.getElementById(id) : id;
+            this.oUl = this.wrap.getElementsByTagName("ul")[0];
+            this.aLi = this.wrap.getElementsByTagName("li");
+            this.prev = this.wrap.getElementsByTagName("pre")[0];
+            this.next = this.wrap.getElementsByTagName("pre")[1];
+            this.timer = null;
+            this.aSort = [];
+            this.iCenter = 3;
+            this._doPrev = function () {return _that.doPrev.apply(_that)};
+            this._doNext = function () {return _that.doNext.apply(_that)};
+            this.options = [
+                {width:120, height:150, top:71, left:134, zIndex:1},          //1,7 不可见，只为方便参数加载，2-6显示
+                {width:130, height:170, top:61, left:0, zIndex:2},
+                {width:170, height:218, top:37, left:110, zIndex:3},
+                {width:224, height:288, top:0, left:262, zIndex:4},
+                {width:170, height:218, top:37, left:468, zIndex:3},
+                {width:130, height:170, top:61, left:620, zIndex:2},
+                {width:120, height:150, top:71, left:496, zIndex:1}    ];
+            for (var i = 0; i < this.aLi.length; i++) this.aSort[i] = this.aLi[i];
+            this.setUp();
+            this.addEvent(this.prev, "click", this._doPrev);
+            this.addEvent(this.next, "click", this._doNext);
+            this.doImgClick();
+            this.timer = setInterval(function ()
+            {
+                _that.doNext()
+            }, 3000);
+            this.wrap.onmouseover = function ()
+            {
+                clearInterval(_that.timer)
+            };
+            this.wrap.onmouseout = function ()
+            {
+                _that.timer = setInterval(function ()
+                {
+                    _that.doNext()
+                }, 3000);
+            }
+        },
+        doPrev : function ()
+        {
+            this.aSort.unshift(this.aSort.pop());  //首（+1）  尾（-1）
+            this.setUp()
+        },
+        doNext : function ()
+        {
+            this.aSort.push(this.aSort.shift());
+            this.setUp()
+        },
+        doImgClick : function ()
+        {
+            var _that = this;
+            for (var i = 0; i < this.aSort.length; i++)
+            {
+                this.aSort[i].onclick = function ()
+                {
+                    if (this.index > _that.iCenter)
+                    {
+                        for (var i = 0; i < this.index - _that.iCenter; i++) _that.aSort.push(_that.aSort.shift());
+                        _that.setUp();
+                    }
+                    else if(this.index < _that.iCenter)
+                    {
+                        for (var i = 0; i < _that.iCenter - this.index; i++) _that.aSort.unshift(_that.aSort.pop());
+                        _that.setUp();
+                    }
+                }
+            }
+        },
+        setUp : function ()
+        {
+            var _that = this;             //原状态保存
+            var i = 0;
+            for (i = 0; i < this.aSort.length; i++) this.oUl.appendChild(this.aSort[i]);
+            for (i = 0; i < this.aSort.length; i++)
+            {
+                this.aSort[i].index = i;
+                if (i < 7)
+                {
+                    this.css(this.aSort[i], "display", "block");
+                    this.doMove(this.aSort[i], this.options[i], function ()   //多重回调函数
+                    {
+                            _that.doMove(_that.aSort[_that.iCenter].getElementsByTagName("img")[0], {opacity:100}, function ()
+                            {
+                                _that.aSort[_that.iCenter].onmouseover = function ()
+                                {
+                                    _that.doMove(this.getElementsByTagName("div")[0], {bottom:0})
+                                };
+                                _that.aSort[_that.iCenter].onmouseout = function ()
+                                {
+                                    _that.doMove(this.getElementsByTagName("div")[0], {bottom:-100})
+                                }
+                            })
+                    });
+                }
+                else
+                {
+                    this.css(this.aSort[i], "display", "none");
+                    this.css(this.aSort[i], "width", 0);
+                    this.css(this.aSort[i], "height", 0);
+                    this.css(this.aSort[i], "top", 37);
+                    this.css(this.aSort[i], "left", this.oUl.offsetWidth / 2)      //此处为了使得位置保持原来初始位置
+                }
+                if (i < this.iCenter || i > this.iCenter)
+                {
+                    this.css(this.aSort[i].getElementsByTagName("img")[0], "opacity", 30)
+                    this.aSort[i].onmouseover = function ()
+                    {
+                        _that.doMove(this.getElementsByTagName("img")[0], {opacity:100})
+                    };
+                    this.aSort[i].onmouseout = function ()
+                    {
+                        _that.doMove(this.getElementsByTagName("img")[0], {opacity:35})
+                    };
+                    this.aSort[i].onmouseout();
+                }
+                else
+                {
+                    this.aSort[i].onmouseover = this.aSort[i].onmouseout = null
+                }
+            }
+        },
+        addEvent : function (element, sEventType, fnHandler)
+        {
+            return element.addEventListener ? element.addEventListener(sEventType, fnHandler, false) : element.attachEvent("on" + sEventType, fnHandler)
+        },
+        css : function (element, attr, value)
+        {
+            if (arguments.length == 2)
+            {
+                return element.currentStyle ? element.currentStyle[attr] : getComputedStyle(element, null)[attr]
+            }
+            else if (arguments.length == 3)
+            {
+                switch (attr)
+                {
+                    case "width":
+                    case "height":
+                    case "top":
+                    case "left":
+                    case "bottom":
+                        element.style[attr] = value + "px";
+                        break;
+                    case "opacity" :
+                        element.style.filter = "alpha(opacity=" + value + ")";
+                        element.style.opacity = value / 100;
+                        break;
+                    default :
+                        element.style[attr] = value;
+                        break
+                }
+            }
+        },
+
+        doMove : function (element, oAttr, fnCallBack)
+        {
+            var _that = this;
+            clearInterval(element.timer);
+            element.timer = setInterval(function ()
+            {
+                var bStop = true;
+                for (var property in oAttr)
+                {
+                    var iCur = parseFloat(_that.css(element, property));
+                    property == "opacity" && (iCur = parseInt(iCur.toFixed(2) * 100));
+                    var iSpeed = (oAttr[property] - iCur) / 5;
+                    iSpeed = iSpeed > 0 ? Math.ceil(iSpeed) : Math.floor(iSpeed);
+
+                    if (iCur != oAttr[property])
+                    {
+                        bStop = false;
+                        _that.css(element, property, iCur + iSpeed)
+                    }
+                }
+                if (bStop)
+                {
+                    clearInterval(element.timer);
+                    fnCallBack && fnCallBack.apply(_that, arguments)
+                }
+            }, 30)
+        }
+    };
+    window.onload = function ()
+    {
+        var setUp=new ZoomPic("box");
+        setUp();
+    };
+</script>
+</head>
+<body>
+<h1>英雄联盟人物切换</h1>
+<div id="box">
+    <pre class="prev"></pre>
+    <pre class="next"></pre>
+    <ul>
+        <li><img src="../img/1.jpg" /><div><h4>梦宫<span>梦宫</span></h4><p>日本动漫情节元素之一，火影忍者中就有此情结。</p></div></li>
+        <li><img src="../img/2.jpg" /><div><h4>风车<span>风车</span></h4><p>芬兰的风车很多，成名在了日漫的萌系作品上哈哈</p></div></li>
+        <li><img src="../img/3.jpg" /><div><h4>山下智久<span>山下智久</span></h4><p>吉尼斯艺人，多部经典日剧主角，如：求婚大作战。</p></div></li>
+        <li><img src="../img/4.jpg" /><div><h4>山P<span>山P</span></h4><p>山下智久的昵称，作品如：龙樱，code blue。</p></div></li>
+        <li><img src="../img/1.jpg" /><div><h4>梦宫<span>梦宫</span></h4><p>日本动漫情节元素之一，火影忍者中就有此情结。</p></div></li>
+        <li><img src="../img/2.jpg" /><div><h4>风车<span>风车</span></h4><p>芬兰的风车很多，成名在了日漫的萌系作品上哈哈</p></div></li>
+        <li><img src="../img/3.jpg" /><div><h4>山下智久<span>山下智久</span></h4><p>吉尼斯艺人，多部经典日剧主角，如：求婚大作战。</p></div></li>
+        <li><img src="../img/4.jpg" /><div><h4>山P<span>山P</span></h4><p>山下智久的昵称，作品如：龙樱，code blue。</p></div></li>
+        <li><img src="../img/1.jpg" /><div><h4>梦宫<span>梦宫</span></h4><p>日本动漫情节元素之一，火影忍者中就有此情结。</p></div></li>
+        <li><img src="../img/2.jpg" /><div><h4>风车<span>风车</span></h4><p>芬兰的风车很多，成名在了日漫的萌系作品上哈哈</p></div></li>
+        <li><img src="../img/3.jpg" /><div><h4>山下智久<span>山下智久</span></h4><p>吉尼斯艺人，多部经典日剧主角，如：求婚大作战。</p></div></li>
+        <li><img src="../img/4.jpg" /><div><h4>山P<span>山P</span></h4><p>山下智久的昵称，作品如：龙樱，code blue。</p></div></li>
+    </ul>
+</div>
+</body>
+</html>

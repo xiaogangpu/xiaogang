@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>仿豆瓣》瀑布流效果</title>
+    <style type="text/css">
+        *{ margin:0;padding:0;}
+        body{ background:#CCDDFF;}
+        h1{ background:#ccc;margin:0;padding:8px;}
+        ul,li{ list-style:none;}
+        .main{ margin:0 auto;}
+        .main{ width:880px; }
+        .main .col{ width:216px; float: left; margin: 2px; _margin:1px;}
+        .main .col img{ width:216px;border:1px solid #c3c3c3; padding: 2px; margin: 2px 0;}
+        .main .col p{ text-align: center; margin: 0;padding: 0;}
+    </style>
+</head>
+<body>
+<h1>瀑布流图片效果</h1>
+<div class="main">
+    <div class="col"><img src="../img/1.jpg"/><p>1.jpg</p></div>
+    <div class="col"><img src="../img/2.jpg"/><p>2.jpg</p></div>
+    <div class="col"><img src="../img/3.jpg"/><p>3.jpg</p></div>
+    <div class="col"><img src="../img/4.jpg"/><p>4.jpg</p></div>
+</div>
+<script type="text/javascript">
+    var eg={};                          //此题用变量属性划分空间
+    eg.getElementsByClassName = function(className, element) {
+        if(document.getElementsByClassName){
+            return (element || document).getElementsByClassName(className)
+        }
+        var children = (element || document).getElementsByTagName('*');
+        var elements = [];
+        for (var i = 0; i < children.length; i++) {
+            var child = children[i];
+            var classNames = child.className.split(' ');
+            for (var j = 0; j < classNames.length; j++) {
+                if (classNames[j] == className) {
+                    elements.push(child);
+                    break;
+                }
+            }
+        }
+        return elements;
+    };
+    eg.getDataList = function(min,max){      //模拟构造数据，实际由Ajax请求获取
+        var lst=[];                          //返回数组
+        lst=["../img/1.jpg","../img/2.jpg","../img/3.jpg","../img/4.jpg","../img/4.jpg","../img/7.jpg"];
+        return lst;
+    };
+    eg.cols = eg.getElementsByClassName("col");    //美个列对象缓存
+    eg.colh = [0,0,0,0];						    //高度
+    eg.getColMin = function(){	                     //计算4列高度
+        var min = 0,m = {};
+        for(var i=0;i<4;i++){
+            min = parseInt(eg.cols[i].offsetHeight);
+            eg.colh[i] = min;
+            m[min] = i;
+        }
+
+        return eg.cols[m[Math.min.apply(Array,eg.colh)]||0];//返回最小高度的对象
+    };
+    eg.add = function(dl){                                     //追加数据的方法
+        for(var i in dl){
+            var newDiv = document.createElement("div")
+            var newImg = document.createElement("img");
+            newImg.src = dl[i];
+            newDiv.appendChild(newImg);
+            newDiv.innerHTML += '<p>['+dl[i]+']</p>';
+
+            eg.getColMin().appendChild(newDiv);            //追加到最小高度列里
+        }
+    };
+    eg.scroll = function(){
+        window.onscroll = function(){
+            var doc = document;
+            var top = doc.innerWidth||doc.documentElement.scrollTop || doc.body.scrollTop;		//滚动条到顶部的高度
+            var winH = doc.innerHeight||doc.documentElement.clientHeight||doc.body.clientHeight;	//可视窗口的高度
+            if(Math.min.apply(Array,eg.colh) < top+winH){                            //如果最小高度小于可视区域，就补充
+                eg.add(eg.getDataList(1,6));                                                       //获取数据，并追加
+            }
+        };
+    };
+    window.onload=function()          //虽然文末，还是写上好。。。哈哈
+    {
+        eg.getColMin();
+        var ll=eg.getDataList(2,6);
+        eg.add(ll);
+        eg.scroll();
+    }
+</script>
+</body>
+</html>
