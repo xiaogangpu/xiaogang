@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8">
+    <title>选词填空</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <style>
+
+    </style>
+</head>
+<body>
+    <!-- 外层容器，负责控制子元素的宽度，同时使其水平居中 -->
+    <div class="container">
+        <!-- 顶部工具 -->
+        <div class="header-1">
+            <div class="back"><span class="glyphicon glyphicon-arrow-left"></span></div>
+            <div class="send"><span class="glyphicon glyphicon-send"></span></div>
+            <div class="submit">交卷</div>
+        </div>
+
+        <!-- 第一个部分内容（题目） -->
+        <div class="body-1">
+            <div class="title">
+                <span class="icon-book">
+                    <span class="glyphicon glyphicon-book"></span>
+                </span>
+                <span class="word">点击空格处，选择最恰当的单词</span>
+            </div>
+            <div class="article">
+                It's the first question parents ask when their child is diagnosed with autism (自闭症). 
+                Will his future brothers or sisters have a higher risk of 1--- it, too? According to the largest study of siblings (兄弟姐妹) in families with autism, 
+                the answer is yes. Among 664 children who had at least one older sibling with the developmental disorder, the 2---risk of autism was nearly 19%, 
+                3---higher than previous sibling-recurrence estimates that were anywhere from 3% to 10%. Kids with more than one older autistic sibling had an even higher risk of the disorder: 32%. 
+               The 4---suggest that genes play a key role in autism risk. But they also hint that other environmental factors 5---by siblings, like influences in the womb (子宫), may be important as well. 
+               On the 6---of the findings, the researchers recommend that doctors closely 7---younger siblings of autistic children to pick up any early signs of the disorder, 
+                8---an unusually large head or delayed language development and communication skills. Evidence suggests that early 9--- and diagnosis of autism can help children take advantage of therapies that can treat some of its 10---
+            </div>
+        </div>
+
+        <!-- 中间可拉伸工具 -->
+        <div class="header-2">
+            <div class="drag"><span class="glyphicon glyphicon-align-justify"></span></div>
+        </div>
+
+        <!-- 第二部分内容（选项、答案等） -->
+        <div class="body-2">
+            <div class="nav-bar">
+                <div class="button-group">
+                    <div class="button">1</div>
+                    <div class="button">2</div>
+                    <div class="button">3</div>
+                    <div class="button">4</div>
+                    <div class="button">5</div>
+                    <div class="button">6</div>
+                    <div class="button">7</div>
+                    <div class="button">8</div>
+                    <div class="button">9</div>
+                    <div class="button">10</div>
+                </div>
+                <div class="angle-group">
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                    <div class="triangle-container"><div class="triangle"></div></div>
+                </div>
+            </div>
+            <!-- choice和answer同时只能有一个出现 -->
+            <div class="choice" style="display:none;">
+
+                <div class="table" >
+                    <div class="tr">
+                        <div class="td">monitor</div><div class="td">dramatically</div><div class="td">results</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">detection</div><div class="td">distributed</div><div class="td">common</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">reason</div><div class="td">average</div><div class="td">developing</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">basis</div><div class="td">symbols</div><div class="td">including</div>
+                    </div>
+                    <div class="tr">
+                        <div class="td">symptoms</div><div class="td">shared</div><div class="td">consequently</div>
+                    </div>
+                </div>
+
+            </div>
+            <div id="answer" style="display:none;">
+               <!-- <div class="details">
+                    <p class="zh">答案：</p>
+                    <p>of developing it</p>
+                    <p class="zh">发展 它的</p>
+                </div>
+                <div class="details">
+                    <p class="zh">结构：</p>
+                    <p><span class="zh">介词：</span><span>+doing+sth</span></p>
+                </div>-->
+            </div>
+            <!-- choice和answer同时只能有一个出现 -->
+        </div>
+
+        <!-- 弹出框及其背景层 -->
+        <div class="notice" style="display:none;">
+            <div class="item"><p>成绩报告</p></div>
+            <div class="panel">
+                <div class="showP"><p>20%</p></div>
+                <div class="showL"><p>正确率</p></div>
+                <div class="showN">
+                    <ul>
+                        <li>1</li><li>2</li><li>3</li><li>4</li><li>5</li>
+                        <li>6</li><li>7</li><li>8</li><li>9</li><li>10</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="enter">
+                <div class="server outline"><span>查解析</span></div><div class="server return"><span>回列表</span></div>
+            </div>
+        </div>
+
+        <div class="notice-bg" style="display:none;"></div>
+
+    </div>
+    <script type="text/javascript" charset="gbk" src="js/drag.js"></script>
+</body>
+</html>
