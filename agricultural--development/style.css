@@ -1,0 +1,268 @@
+body,div,li,p,ul {
+	margin: 0;
+	padding: 0;
+	font-size: 14px;
+}
+
+img {
+	border: none;
+}
+
+li,ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.clearFix:after {
+	clear: both;
+	display: block;
+	visibility: hidden;
+	height: 0;
+	content: ".";
+	line-height: 0;
+}
+
+#header {
+	overflow: hidden;
+	width: 100%;
+	height: 650px;
+	background: url(images/header_bg.jpg) no-repeat -300px;
+}
+
+#header .logo {
+	margin: 2em 0 0 9em;
+}
+
+#header .nav {
+	margin-top: 2em;
+	width: 100%;
+	height: 45px;
+	background: url(images/nav_bg.png) repeat-x;
+}
+
+#header .nav ul {
+	margin: 0 auto;
+	width: 970px;
+	font-size: 1em;
+	line-height: 45px;
+}
+
+#header .nav ul li {
+	float: left;
+	width: 9%;
+}
+
+#header .nav ul li a {
+	color: #fff;
+}
+
+#header .nav ul li a:hover {
+	color: #ff0;
+}
+
+#main {
+	width: 100%;
+	background: #faf7dc;
+}
+
+#main .aboutMe {
+	position: relative;
+	margin: 0 auto;
+	width: 980px;
+	height: auto;
+	border: 1px solid red;
+}
+
+.aboutMe p {
+	width: 660px;
+}
+
+.aboutMe p img {
+	float: left;
+}
+
+.aboutMe p span {
+	float: right;
+	width: 5in;
+	font-size: 9pt;
+	line-height: 1.8em;
+}
+
+.aboutMe ul {
+	width: 660px;
+}
+
+.aboutMe ul li {
+	float: left;
+	padding-left: 10px;
+}
+
+.aboutMe .apple {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+}
+
+.aboutMe .video {
+	position: absolute;
+	top: 20px;
+	right: 0;
+}
+
+#main .farmBox {
+	width: 100%;
+	background: #f0f9e2 url(images/farm_bg.png) no-repeat 75pt 0;
+}
+
+.farmBox .farm {
+	margin: 0 auto;
+	width: 60pc;
+	border: 1px solid red;
+}
+
+.farmBox .farm .flowerBox {
+	width: 100%;
+}
+
+.farmBox .farm .flowerBox .left {
+	float: left;
+	width: 392px;
+}
+
+.farmBox .farm .flowerBox .right {
+	float: right;
+	width: 545px;
+	border: 1px solid green;
+}
+
+.flowerBox .right .farmNav {
+	padding-left: 50px;
+	width: 500px;
+	height: 40px;
+	background: url(images/farmNav_bg.png) repeat-x;
+}
+
+.flowerBox .right .farmNav li {
+	float: left;
+	width: 20%;
+	text-align: center;
+	font-weight: 700;
+	line-height: 40px;
+}
+
+.flowerBox .right .farmNav li:hover {
+	width: 20%;
+	background: url(images/farmNavhover.png) repeat-x;
+}
+
+.flowerBox .right .farmNav li a {
+	color: #000;
+}
+
+.flowerBox .right .farmNav li a:hover {
+	color: #fff;
+}
+
+.flowerBox .right .farmPic {
+	margin: 0 auto;
+	width: 100%;
+}
+
+.flowerBox .right .farmPic li {
+	float: left;
+	padding: 18px;
+}
+
+.flowerBox .right .farmPic li img {
+	border: 2px solid #b7d3a1;
+}
+
+#main .example {
+	margin: 0 auto;
+	width: 977px;
+}
+
+#main .example .examplePic {
+	margin: 0 auto;
+	width: 940px;
+	border: 1px solid red;
+}
+
+#main .example .examplePic li {
+	float: left;
+	width: 16%;
+	text-align: center;
+}
+
+#main .newsBox {
+	margin: 0 auto;
+	width: 977px;
+	background: #f4f9f2;
+}
+
+#main .newsBox .newsMiddle {
+	float: left;
+	width: 730px;
+}
+
+#main .newsBox .newsMiddle h1 {
+	color: #403e3e;
+	font-size: 1pc;
+}
+
+#main .newsBox .newsContact {
+	float: right;
+	width: 235px;
+	background: url(images/);
+}
+
+#main .newsBox .newsContact address {
+	white-space: pre-line;
+}
+
+#main .newsBox .newsContact h1 {
+	color: #403e3e;
+	font-size: 1pc;
+}
+
+#main .newsBox .newsMiddle .newsList {
+	float: left;
+	margin: 10px 30px 0 20px;
+	line-height: 1.8em;
+}
+
+#main .friendLink {
+	margin: 0 auto;
+	margin-top: 20px;
+	width: 977px;
+	height: 50px;
+	background: #f4f9f2;
+	line-height: 50px;
+}
+
+#main .friendLink li {
+	float: left;
+	width: 5pc;
+	text-align: center;
+}
+
+#main .friendLink li span a {
+	color: #000;
+	font-weith: bold;
+}
+
+#main .friendLink li>a {
+	color: #595e55;
+}
+
+#footer {
+	margin: 20px auto;
+	width: 977px;
+	font-size: 9pt;
+}
+
+
+
