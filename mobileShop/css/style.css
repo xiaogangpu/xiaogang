@@ -1,0 +1,153 @@
+@media screen and (width: 320px) {
+body {
+    font-size: 14.5454px !important;
+}
+}
+@media screen and (width: 360px) {
+body {
+    font-size: 16.3636px !important;
+}
+}
+@media screen {
+* {
+    font-family: "Microsoft YaHei","Georgia Pro","Times New Roman",Helvitica,Verdana,Arial,san-serif;
+    margin: 0;
+    overflow: hidden;
+    padding: 0;
+}
+html {
+    overflow-y: auto;
+}
+body {
+    background-color: #f4f4f4;
+    font-size: 13pt;
+    position: relative;
+}
+}
+.page_guide_slider {
+    overflow: auto;
+    width: 100%;
+}
+.page_guide_balloon {
+    overflow: hidden;
+    /*display: none;*/
+    width: 100%;
+}
+.page_guide_title {
+    color: white;
+    font-weight: bold;
+    height: 2.5em;
+    margin: 0 2%;
+    position: relative;
+    width: 96%;
+}
+.page_guide_title_text {
+    background-color: #616161;
+    background-image: url("../images/voice.png");
+    background-position: 95% 110%;
+    background-repeat: no-repeat;
+    background-size: auto 300%;
+    border-radius: 0.3em;
+    bottom: 0;
+    cursor: pointer;
+    height: 1.4em;
+    max-width: 7em;
+    padding: 0.3em 1.8em 0.3em 0.6em;
+    position: absolute;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.page_guide_title_text.canplay {
+    background-position: 95% -10%;
+}
+.page_guide_title_text.playing {
+    background-position: 95% 50%;
+}
+.page_guide_pointer {
+    height: 0.5em;
+    margin: 0 3.5%;
+    position: relative;
+    width: 93%;
+}
+.page_guide_pointer > div {
+    border-left: 0.4em solid transparent;
+    border-right: 0.4em solid transparent;
+    border-top: 0.4em solid #616161;
+    height: 0;
+    position: absolute;
+    top: 0;
+    width: 0;
+}
+.page_guide_bar {
+    height: 0.4em;
+    overflow: visible;
+    position: relative;
+}
+.page_guide_progress {
+    background-color: #afced3;
+    border: 1px solid #a7a7a7;
+    border-radius: 0.3em;
+    left: 0;
+    margin: 0 4%;
+    overflow: visible;
+    position: absolute;
+    width: 192%;
+}
+.page_guide_progress > div {
+    box-sizing: border-box;
+    float: left;
+    height: 0.2em;
+}
+.page_guide_container {
+    cursor: e-resize;
+    width: 100%;
+}
+.page_guide_container img {
+    background-image: url("../images/loading.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 50% auto;
+    border-left: 1px solid transparent;
+    float: left;
+    height: 10em;
+    margin: 0 0.3em;
+    min-width: 5em;
+    overflow: hidden;
+    padding: 0;
+    width: auto;
+}
+.page_guide_items {
+    height: 11.6em;
+    width: 500%;
+}
+.page_guide_item {
+    background-color: white;
+    border: 1px solid #dedede;
+    border-radius: 0.5em;
+    float: left;
+    margin: 0.5em;
+    padding: 0.3em;
+}
+.page_guide_item_text {
+    float: left;
+    /*padding: 1em;*/
+    /*width: 14em;*/
+}
+.page_guide_item_title {
+    border-bottom: 1px solid #dedede;
+    color: red;
+    height: 1.3em;
+    max-width: 100%;
+    padding: 0.5em 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.page_guide_item_intr {
+    /*font-size: 0.8em;
+    height: 6em;*/
+    /*line-height: 1.5em;*/
+    margin: 0;
+}
+.page_guide_item_image {
+    float: left;
+}
