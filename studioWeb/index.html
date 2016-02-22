@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<title>工作室小模板pxg</title>
+	<link rel="stylesheet" type="text/css" href="css/public.css">
+	<link rel="stylesheet" type="text/css" href="css/header.css">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
+		<link rel="stylesheet" type="text/css" href="css/footer.css">
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="js/banner.js"></script>
+	<script src="js/soft.js"></script>
+	<script src="js/scroller_roll.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.marquee').kxbdMarquee({
+				direction:'left',
+				eventA:'mouseenter',
+				eventB:'mouseleave'
+			});
+			$(".login_off img").css({
+				"border-radius":"50%"
+			})
+		});
+	</script>
+
+
+</head>
+<body>
+<!--*************header 	star***********************-->
+	<div id="header">
+		<div class="header_top"></div>
+		<div class="header_box ma_mid">
+			<div class="logo_box clearFix">
+				<div class="logo fl">
+					<img src="images/logo.png" title="成都市地理名师范永杰工作室" />
+					<span class="logo_name font_color fz16">工作室小模板pxg</span>
+				</div>
+				<div class="login_off">
+					<img src="images/banner1.jpg" /><span>181111111</span><a href="#">注销</a>
+				</div>
+				<!--<div class="login_box fr">-->
+					<!--<div class="login">-->
+						<!--<a href="#">登录</a><span class="fr">-->
+						<!--<a href="#">注册</a></span>-->
+					<!--</div>-->
+				<!--</div>-->
+			</div>
+			<!--nav_box 	star-->
+			<ul class="nav_box clearFix">
+				<li class="active"><a href="#">首页</a></li>
+				<li><a href="#" onclick="scroller('academic',300)">学术动态</a></li>
+				<li><a href="#" onclick="scroller('research',400)">课题研究</a></li>
+				<li><a href="#" onclick="scroller('database',500)">地理资源库</a></li>
+				<li><a href="#" onclick="scroller('scientific',600)">科学论文</a></li>
+				<li><a href="#" onclick="scroller('report',700)">地理时空报</a></li>
+				<li><a href="#" onclick="scroller('student',800)">学生活动</a></li>
+			</ul>
+		</div>
+	</div>
+<!--*************banner 	star******************************-->
+
+	<div class="banner" id="banner" >
+		<a href="#" class="d1" style="background:url(images/banner1.jpg) center no-repeat;"></a>
+		<a href="#" class="d1" style="background:url(images/banner2.jpg) center no-repeat;"></a>
+		<a href="#" class="d1" style="background:url(images/banner3.jpg) center no-repeat;"></a>
+		<a href="#" class="d1" style="background:url(images/banner4.jpg) center no-repeat;"></a>
+		<a href="#" class="d1" style="background:url(images/banner5.jpg) center no-repeat;"></a>
+		<div class="d2" id="banner_id">
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">banner()</script>
+<!--content-->
+	<div id="content">
+		<!--学术动态-->
+		<div class="academic" id="academic">
+		    <div class="title">
+		        <p>学术动态</p>
+		        <div></div>
+		        <p><span>Academic trends</span></p>       
+		    </div>
+		    <div class="academic_list">
+		        <ul class="clearFix">
+		            <li>
+		                <a href="#"><img src="images/academic_1.jpg" /></a>
+		                <p><a href="#" >成都工作室小模板pxg</a></p>
+		                <p><a href="#">学会使用课本教科书既是掌握知识技能的工具，又是培养自学能力的依据</a></p>
+		                <p>2015.11.21</p>
+		            </li>
+		            <li>
+						<a href="#"><img src="images/academic_2.jpg" /></a>
+		                <p><a href="#" target="_blank">成都工作室小模板pxg</a></p>
+		                <p><a href="#" target="_blank">学会使用课本教科书既是掌握知识技能的工具，又是培养自学能力的依据</a></p>
+		                <p>2015.11.21</p>
+		            </li>
+		            <li>
+						<a href="#"><img src="images/academic_3.jpg" /></a>
+		                <p><a href="#" target="_blank">成都工作室小模板pxg</a></p>
+		                <p><a href="#" target="_blank">学会使用课本教科书既是掌握知识技能的工具，又是培养自学能力的依据</a></p>
+		                <p>2015.11.21</p>
+		            </li>
+		        </ul>
+		        <a class="point_more" href="#">了解更多>></a>
+		    </div> 
+		</div>
+   
+<!-- 课题研究-->
+
+		<div class="research" id="research">
+		    <div class="title">
+		        <p>课题研究</p>
+		        <div></div>
+		        <p><span>Reserch topic</span></p>       
+		    </div>
+		    <div class="research_list clearFix">
+		        <div class="research_content fl clearFix">
+		            <div class="result_title"><span>成果展示</span></div>
+		            <ul>
+		                <li>
+		                    <a href="subject_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		                <li>
+		                    <a href="subject_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		                <li>
+		                    <a href="subject_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		                <li>
+		                    <a href="subject_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		            </ul>
+		            <a class="point_more" href="subject_list.html">了解更多>></a>
+		        </div>
+		        <div class="research_content fr clearFix">
+		            <div class="communicate_title"><span>交流研究</span></div>
+		            <ul>
+		                <li>
+		                    <a href="note_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		                <li>
+		                    <a href="note_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		                <li>
+		                    <a href="note_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		                <li>
+		                    <a href="note_list.html">高三数学高三数学</a>
+		                    <span>2015-12-13</span>
+		                </li>
+		            </ul>
+		            <a class="point_more" href="note_list.html">了解更多>></a>
+		        </div>
+		    </div>
+		</div>
+<!-- 地理资源库-->
+
+		<div class="database" id="database">
+		    <div class="title">
+		        <p>地理资源库</p>
+		        <div></div>
+		        <p><span>Geographic resource database</span></p>       
+		    </div>
+		    <div class="database_class">
+		        <ul class="clearFix">
+		            <li class="data_list1"><a href="resource_list.html">地理教案</a></li>
+		            <li class="data_list2"><a href="resource_list.html">地理学案</a></li>
+		            <li class="data_list3"><a href="resource_map.html">地理图</a></li>
+		            <li class="data_list4"><a href="#" target="_blank">地理视频</a></li>
+		            <li class="data_list5"><a href="resource_list.html">地理课件</a></li>
+		            <li class="data_list6"><a href="note_list.html" target="_blank">试题交流</a></li>
+		        </ul>
+		    </div>
+		</div>
+<!--科学论文-->
+
+		<div class="scientific" id="scientific">
+		    <div class="title">
+		        <p>科学论文</p>
+		        <div></div>
+		        <p><span>Scientific papers</span></p>       
+		    </div>
+		    <div class="science_class">
+		        <ul class="clearFix">
+		            <li>
+		                <div class="balloon">
+		                    <div class="balloon_msg">
+		                        <p>章节练习</p>
+		                        <div>
+									<a href="#">
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+									</a>
+		                            <span class="balloon_more"><a href="#">[更多]</a></span>
+		                        </div>
+		                    </div>
+		                </div>
+		                <img src="images/scientific_01.jpg" class="balloon_img" />
+		            </li>
+					<li>
+						<div class="balloon">
+							<div class="balloon_msg">
+								<p>章节练习</p>
+								<div>
+									<a href="#">
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+									</a>
+									<span class="balloon_more"><a href="#">[更多]</a></span>
+								</div>
+							</div>
+						</div>
+						<img src="images/scientific_01.jpg" class="balloon_img" />
+					</li>
+					<li>
+						<div class="balloon">
+							<div class="balloon_msg">
+								<p>章节练习</p>
+								<div>
+									<a href="#">
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+									</a>
+									<span class="balloon_more"><a href="#">[更多]</a></span>
+								</div>
+							</div>
+						</div>
+						<img src="images/scientific_01.jpg" class="balloon_img" />
+					</li>
+					<li>
+						<div class="balloon">
+							<div class="balloon_msg">
+								<p>章节练习</p>
+								<div>
+									<a href="#">
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+										章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习章节练习
+									</a>
+									<span class="balloon_more"><a href="#">[更多]</a></span>
+								</div>
+							</div>
+						</div>
+						<img src="images/scientific_01.jpg" class="balloon_img" />
+					</li>
+		        </ul>
+		        <a class="point_more" href="#">了解更多>></a>
+		    </div>
+		</div>
+<!--地理时空报-->
+		<div class="report" id="report">
+		    <div class="title">
+		        <p>地理时空报</p>
+		        <div></div>
+		        <p><span>Geography space time report</span></p> 
+		    </div>
+		    <div class="report_class">
+		        <ul class="clearFix">
+		            <li><div class="report_pic" style="background:url('images/scientific_01.jpg') no-repeat 0 0;"></div><a href="#" target="_blank"><p>武汉地理气候变化的原因</p>
+						<span>地理周刊 2015年第12期</span></a></li>
+		            <li><div class="report_pic" style="background:url('images/scientific_01.jpg') no-repeat 0 0;"></div><a href="#" target="_blank"><p>武汉地理气候变化的原因</p> <span>地理周刊 2015年第12期</span></a></li>
+		            <li><div class="report_pic" style="background:url('images/scientific_01.jpg') no-repeat 0 0;"></div><a href="#" target="_blank"><p>武汉地理气候变化的原因</p> <span>地理周刊 2015年第12期</span></a></li>
+		        </ul>
+		        <a class="point_more" href="#">了解更多>></a>
+		    </div>
+		</div>
+		<!--学生活动-->
+		<div class="student" id="student">
+			<div class="title">
+				<p>学生活动</p>
+				<div></div>
+				<p><span>Student activities</span></p>
+			</div>
+			<div class="student_class">
+				<ul class="clearFix">
+					<li>
+						<img src="images/student_1.png" />
+						<div class="student_content fl">
+							<a href="#" >夕阳下的嬉戏</a>
+							<a href="#" class="student_a">
+								学习后同学们一起玩耍，让学习的劳累和休闲自在结合在一起，让学习的劳累和休闲自在结合在一起。
+							</a>
+						</div>
+					</li>
+					<li>
+						<img src="images/student_1.png" />
+						<div class="student_content fl">
+							<a href="#" target="_blank">夕阳下的嬉戏</a>
+							<a href="#" class="student_a">
+								学习后同学们一起玩耍，让学习的劳累和休闲自在结合在一起，让学习的劳累和休闲自在结合在一起。
+							</a>
+						</div>
+					</li>
+					<li>
+						<img src="images/student_1.png" />
+						<div class="student_content fl">
+							<a href="#" target="_blank">夕阳下的嬉戏</a>
+							<a href="#" class="student_a">
+								学习后同学们一起玩耍，让学习的劳累和休闲自在结合在一起，让学习的劳累和休闲自在结合在一起。
+							</a>						</div>
+					</li>
+					<li>
+						<img src="images/student_1.png" />
+						<div class="student_content fl">
+							<a href="#" target="_blank">夕阳下的嬉戏</a>
+							<a href="#" class="student_a">
+								学习后同学们一起玩耍，让学习的劳累和休闲自在结合在一起，让学习的劳累和休闲自在结合在一起。
+							</a>						</div>
+					</li>
+					<li>
+						<img src="images/student_1.png" />
+						<div class="student_content fl">
+							<a href="#" target="_blank">夕阳下的嬉戏</a>
+							<a href="#" class="student_a">
+								学习后同学们一起玩耍，让学习的劳累和休闲自在结合在一起，让学习的劳累和休闲自在结合在一起。
+							</a>						</div>
+					</li>
+					<li>
+						<img src="images/student_1.png" />
+						<div class="student_content fl">
+							<a href="#" target="_blank">夕阳下的嬉戏</a>
+							<a href="#" class="student_a">
+								学习后同学们一起玩耍，让学习的劳累和休闲自在结合在一起，让学习的劳累和休闲自在结合在一起。
+							</a>						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<!--名师风采-->
+		<div class="teacher clearFix" id="teacher">
+			<div class="teacher_head"><span class="teacher_line"></span>名师风采
+				<a class="point_more" href="#">了解更多>></a>
+			</div>
+			<div id="teacher_list" class="marquee ma_mid">
+				<ul class="teacher_item clearFix" id="teacher_item">
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石1</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石2</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石3</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石4</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石5</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石6</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石7</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石8</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石9</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+					<li>
+						<img src="images/teacher_1.png" />
+						<div class="teach_info_box">
+							<div class="teach_info">
+								<p>黄石10</p>
+								<p>任教10年</p>
+								<p>2112年毕业于成都师范大学，在石室中学任教3年，成都7中任教7年，为教育事业做出了非凡的成绩</p>
+							</div>
+						</div>
+					</li>
+				</ul>
+
+			</div>
+
+			<!--jq 图片动画-->
+
+		</div>
+	</div>
+
+
+<!--************footer 	star********************************-->
+		<div id="footer">
+			<div class="footer_box">
+				<ul class="about_our ma_mid clearFix">
+					<li><a href="#">CCTV专题报道</a></li>
+					<li><a href="#">关于我们</a></li>
+					<li><a href="#">服务条款</a></li>
+					<li><a href="#">隐私条款</a></li>
+					<li><a href="#">联系我们</a></li>
+					<li><a href="#">招聘求贤</a></li>
+					<li><a href="#">版本更新</a></li>
+				</ul>
+				<div class="contact_box clearFix ma_mid">
+					<ul class="contact_our fl">
+						<li>联系我们</li>
+						<li>咨询热线：0755-86716136</li>
+						<li>创业者服务邮箱：bp@angelclub.com</li>
+					</ul>
+					<ul class="contact_addr fr">
+						<li>服务邮箱：ir@angelclub.com</li>
+						<li>公司地址：四川省成都市中和镇天河路11号</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

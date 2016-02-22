@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+#personal_box {
+    width:1000px;
+    margin-top:30px;
+    padding-bottom:50px;
+    border:1px solid #EBEBEB;
+}
+.set_left {
+    width:100px;
+    background:#eee;
+}
+.set_left li {
+    text-align:center;
+    padding:20px 0;
+    font-size:18px;
+}
+.set_left .li_border {
+    border-top:1px solid #D2D2D2;
+    border-bottom:1px solid #D2D2D2;
+}
+.set_left li a {
+    color:#5d5d5d;
+}
+.set_left li .active_color {
+    color:#bf0000;
+}
+.set_left li a:hover {
+    color:#bf0000;
+}
+.set_right {
+    width:700px;
+}
+.set_right .head_pic img {
+    width:150px;
+    height:150px;
+    -webkit-border-radius:50%;
+    -moz-border-radius:50%;
+    border-radius:50%;
+}
+.set_right h2 {
+    padding-bottom:20px;
+    text-align:center;
+    font-size:17px;
+    color:#5d5d5d;
+}
+.set_right .head_pic {
+    position:relative;
+    min-height:400px;
+}
+.set_right .head_pic2 {
+    margin-left:100px;
+}
+.set_right .head_pic2 .file_sub {
+    width:100px;
+}
+.set_right .head_pic2 h3 {
+    text-align:center;
+}
+.set_right .head_pic2 h3 a {
+    display: inline-block;
+    width:70px;
+    height:30px;
+    margin-top:20px;
+    line-height:30px;
+    font-size:14px;
+    color:#bf0000;
+    border:1px solid #bf0000;
+    border-radius:5px;
+}
+.head_pic p {
+    text-align:center;
+}
+.head_pic .input_sub input {
+    position:absolute;
+    left:50%;
+    bottom:0;
+    margin-left:-50px;
+    width:100px;
+    height:50px;
+    font-size:18px;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+}
+.head_pic1 input {
+   background:#bf0000;
+}
+.head_pic2 input {
+
+}
+
+/*******resetpw     star********************/
+
+.reset_pw h1 {
+    color:#bf0000;
+    padding-bottom:20px;
+}
+.reset_pw p {
+    margin-top:10px;
+}
+.reset_pw p strong {
+    padding-left:10px;
+    font-size:14px;
+    color:red;
+
+}
+.reset_pw span {
+    display:inline-block;
+    width:100px;
+    font-size:16px;
+    color:#5d5d5d;
+}
+.reset_pw input {
+    width:320px;
+    height:50px;
+    line-height:50px;
+    border:1px solid #e5e5e5;
+}
+.reset_pw .reset_sub {
+    width:95px;
+    height:50px;
+    margin-top:20px;
+    margin-left:330px;
+    color:#fff;
+    font-size:16px;
+    border-radius:5px;
+    background:#bf0000;
+    cursor:pointer;
+}

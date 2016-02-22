@@ -1,0 +1,90 @@
+﻿
+/*-------------studio_index--------------*/
+.resource {
+    width:1000px;
+    margin:0 auto;
+    margin-top:40px;
+}
+/********grade star***************/
+.grade {
+    width:80px;
+    margin-left:10px;
+    border-radius:5px;
+    border:1px solid #bf0000;
+}
+.grade ul {
+    width:100%;
+}
+.grade ul li {
+    width:100%;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+}
+.grade ul .grade_li1 a {
+    color:#bf0000;
+}
+.grade ul li a {
+    font-size:16px;
+    color:#5d5d5d;
+}
+.grade ul li a:hover {
+    color:#bf0000;
+    transition:color 0.2s;
+}
+
+#studio {
+    width:860px;
+}
+.result_content {
+    width:858px;
+    background:#fff;
+    border:1px solid #F3F3F3;
+
+}
+.result_content h3 {
+    padding-top:20px;
+    text-align:center;
+    font-weight:500;
+    font-size:20px;
+}
+.result_content p {
+    text-align:right;
+    font-size:14px;
+    color:#d7d3d3;
+}
+.result_content a.download {
+    width:23px;
+    height:23px;
+    margin:0 10px 0 90px;
+    display:inline-block;
+    color:#e1dede;
+    background:url("../images/rs_show_list_bg.png") no-repeat -23px 0;
+    background-size:cover;
+}
+.result_content div{
+    margin-top:10px;
+    padding:20px;
+    border-top:1px solid #dcdcdc;
+}
+.result_content div p {
+    text-align:left;
+    font-size:16px;
+    line-height:28px;
+    color:#808080;
+}
+#studio .next {
+    margin:20px 0 30px;
+    padding-left:20px;
+}
+#studio .next a {
+    font-size:14px;
+    color:#808080;
+}
+
+#studio .next a:hover {
+    color:#bf0000;
+    transition:color 0.5s;
+}
+
+

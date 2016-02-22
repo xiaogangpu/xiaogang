@@ -1,0 +1,26 @@
+/********note page 重置**********************/
+.note .words .page {
+    width:1000px;
+    margin:0 auto;
+    position:static;
+}
+.note .words .page div {
+    float:right;
+
+}
+/***标题**********/
+.title_name {
+    display:block;
+    margin-left:10px;
+    padding-bottom:10px;
+    font-size:14px;
+    color:#BF004F;
+
+}
+.text_title {
+    width:500px;
+    height:30px;
+    margin-left:10px;
+    line-height:30px;
+    border:1px solid #ADADAD;
+}

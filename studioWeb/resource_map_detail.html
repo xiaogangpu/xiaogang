@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>地理图片</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/list_header.css" />
+    <link rel="stylesheet" type="text/css" href="css/resource_map.css"/>
+    <!-- Example assets -->
+    <link rel="stylesheet" type="text/css" href="css/jcarousel.connected-carousels.css">
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/show_bg.js"></script>
+    <script type="text/javascript" src="js/jquery.jcarousel.min.js"></script>
+    <script type="text/javascript" src="js/jcarousel.connected-carousels.js"></script>
+</head>
+<body>
+<!--*******顶部 header_nav star*****************-->
+<div id="header_nav">
+    <div class="header_nav">
+        <ul class="nav_box ma_mid clearFix">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">学术动态</a></li>
+            <li><a href="#">课题研究</a></li>
+            <li><a href="#">地理资源库</a></li>
+            <li><a href="#">科学论文</a></li>
+            <li><a href="#">地理时空报</a></li>
+            <li><a href="#">学生活动</a></li>
+        </ul>
+           <span>
+                <img src="images/nav_head_pic.png" /><a href="#">注销</a>
+                <span class="login" style="display:none;"><a href="#">登录</a><a href="#">注册</a> </span>
+           </span>
+    </div>
+</div>
+<!--******搜索search star***************-->
+<div id="search_box" class="clearFix">
+    <div class="logo fl">
+        <img src="images/logo.png" title="工作室小模板pxg" alt="" />
+        <span class="logo_name font_color fz16">工作室小模板pxg</span>
+    </div>
+    <form class="search fr" method="post">
+        <input type="text" class="search_text" name="" placeholder="输入搜索关键字" /><input type="submit" class="search_sub" value="搜索">
+    </form>
+</div>
+<!--***********列表show listnav 	star*********************-->
+<div id="rs_show">
+    <h1 class="clearFix">
+        <span><a href="#">地理教案</a></span>
+        <span><a href="#">地理学案</a></span>
+        <span><a href="#">地理课件</a></span>
+        <span><a href="#">地理试题</a></span>
+        <span><a href="#">地理视频</a></span>
+        <span><a href="#">地理图</a></span>
+    </h1>
+</div>
+<!------------------resource star-------------------------------->
+<div id="resource_box" class="ma_mid clearFix">
+    <div class="grade fl">
+        <ul>
+            <li class="grade_li1"><a href="#">区域图</a></li>
+            <li><a href="#">景观图</a></li>
+            <li><a href="#">原理图</a></li>
+            <li><a href="#">专题图</a></li>
+            <li><a href="#">示意图</a></li>
+        </ul>
+    </div>
+    <!------------map show-------------->
+    <div id="rs_show_list_box" class="fr">
+
+        <div class="wrapper">
+            <div class="connected-carousels">
+                <div class="stage">
+                    <div class="carousel carousel-stage">
+                        <ul>
+                            <li><img src="images/picture/img1.jpg"  alt=""></li>
+                            <li><img src="images/picture/img2.jpg"   alt=""></li>
+                            <li><img src="images/picture/img3.jpg" alt=""></li>
+                            <li><img src="images/picture/img4.jpg"  alt=""></li>
+                            <li><img src="images/picture/img5.jpg" alt=""></li>
+                            <li><img src="images/picture/img6.jpg" alt=""></li>
+                        </ul>
+                    </div>
+                    <a href="#" class="prev prev-stage"><span>&lsaquo;</span></a>
+                    <a href="#" class="next next-stage"><span>&rsaquo;</span></a>
+                </div>
+
+                <div class="navigation">
+                    <a href="#" class="prev prev-navigation">&lsaquo;</a>
+                    <a href="#" class="next next-navigation">&rsaquo;</a>
+                    <div class="carousel carousel-navigation">
+                        <ul>
+                            <li><img src="images/picture/img1.jpg"  alt=""></li>
+                            <li><img src="images/picture/img2.jpg"  alt=""></li>
+                            <li><img src="images/picture/img3.jpg"  alt=""></li>
+                            <li><img src="images/picture/img4.jpg"  alt=""></li>
+                            <li><img src="images/picture/img5.jpg"  alt=""></li>
+                            <li><img src="images/picture/img6.jpg"  alt=""></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--******footer 	star********-->
+<div id="footer">
+    <div class="footer_box">
+        <ul class="about_our ma_mid clearFix">
+            <li><a href="#">CCTV专题报道</a></li>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">服务条款</a></li>
+            <li><a href="#">隐私条款</a></li>
+            <li><a href="#">联系我们</a></li>
+            <li><a href="#">招聘求贤</a></li>
+            <li><a href="#">版本更新</a></li>
+        </ul>
+        <div class="contact_box clearFix ma_mid">
+            <ul class="contact_our fl">
+                <li>联系我们</li>
+                <li>咨询热线：0755-86716136</li>
+                <li>创业者服务邮箱：bp@angelclub.com</li>
+            </ul>
+            <ul class="contact_addr fr">
+                <li>服务邮箱：ir@angelclub.com</li>
+                <li>公司地址：四川省成都市</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    $(function(){
+        var i=0,//大图编号
+                len=img.length,//img数组的长度
+                cur=0;//当前图片编号
+        j=9,//默认显示小图个数
+                page=0,//小图的页码
+                $s_next=$('#smallImg-next'),//小图下一页
+                $s_pre=$('#smallImg-pre'),//小图上一页
+                box=$('#smallImg-box').width(),//显示的长度
+                $ul=$('#smallImg-ul'),//小图外层
+                $imgLi=$ul.find('li'),//小图li
+                html=_html='';//存放载入的代码
+        $('#detailImg-box').append('<a href=\"'+img[0].href+'\" class=\"detailImg_1\"><img alt=\"'+img[0].alt+'\" src=\"'+img[i].src+'\"></a><p>'+img[i].title+'</p>');
+        //大图
+        $('#detailImg-next').click(function(){
+            ++i;
+            detailImg_click($s_next,i,len);
+        })
+        $('#detailImg-pre').click(function(){
+            --i;
+            detailImg_click($s_pre,i,len);
+        })
+        //小图
+        for(var k=0;k<j;k++){
+            var _k=k%len;
+            s_html(_k);
+            html+=h;
+        }
+        $ul.append(html);
+        $('.smallImg_1').addClass('cur');
+        //小图下一页
+        $('#smallImg-next').click(function(){
+            if(!$ul.is(':animated')){
+                page++;
+                var a=page*j,_a,c;
+                for(var k=0;k<j;k++,a++){
+                    smallImg_click(a,_a,len,i);
+                    _html+=h;
+                }
+                $ul.append(_html);
+                $ul.css({'left':0,'right':'auto'});
+                $ul.animate({left:-box},1600,function(){
+                    $ul.find('li:lt('+j+')').detach();
+                    $ul.css('left',0);
+                    html='';
+                });//动画执行后,再删除前9个li,将left设回0
+                $('#smallImg-ul li').click(function(){//三处一样，不知道这个要怎么优化？？？
+                    var _this=$(this);
+                    i=_this.attr('class').replace(/[^0-9]/ig,'')-1;
+                    img_info(i);
+                    s_a_r(_this,'cur');
+                    cur=i;
+                })
+            }
+        })
+        //小图上一页
+        $('#smallImg-pre').click(function(){
+            if(!$ul.is(':animated')){
+                page--;
+                var a=(page-1)*j,_a,c;
+                for(var k=0;k<j;k++,a--){
+                    smallImg_click(a,_a,len,i);
+                    _html=h+_html;
+                }
+                $ul.prepend(_html).css({'right':box,'left':'auto'});
+                $ul.animate({right:0},1600,function(){
+                    $ul.find('li:gt('+(j-1)+')').detach();//删除后9个li,从8开始
+                    _html='';
+                });
+                $('#smallImg-ul li').click(function(){
+                    var _this=$(this);
+                    i=_this.attr('class').replace(/[^0-9]/ig,'')-1;
+                    img_info(i);
+                    s_a_r(_this,'cur');
+                    cur=i;
+                })
+            }
+
+        })
+        //点击小图
+        $('#smallImg-ul li').click(function(){
+            var _this=$(this);
+            i=_this.attr('class').replace(/[^0-9]/ig,'')-1;
+            img_info(i);
+            s_a_r(_this,'cur');
+            cur=i;
+        })
+    })
+
+    /*----自定义函数-----------*/
+    var img=[
+        {
+            'href':'#',
+            'alt':'图片1',
+            'src':'images/picture/1_b.jpg',
+            'smallSrc':'images/picture/1_s.jpg',
+            'title':'标题111'
+        },{
+            'href':'www.baidu1.com',
+            'alt':'图片2',
+            'src':'images/picture/2_b.jpg',
+            'smallSrc':'images/picture/2_s.jpg',
+            'title':'标题222'
+        },{
+            'href':'#',
+            'alt':'图片3',
+            'src':'images/picture/3_b.jpg',
+            'smallSrc':'images/picture/3_s.jpg',
+            'title':'标题333'
+        },{
+            'href':'#',
+            'alt':'图片4',
+            'src':'images/picture/4_b.jpg',
+            'smallSrc':'images/picture/4_s.jpg',
+            'title':'标题444'
+        },{
+            'href':'#',
+            'alt':'图片5',
+            'src':'images/picture/5_b.jpg',
+            'smallSrc':'images/picture/5_s.jpg',
+            'title':'标题555'
+        },{
+            'href':'#',
+            'alt':'图片6',
+            'src':'images/picture/6_b.jpg',
+            'smallSrc':'images/picture/6_s.jpg',
+            'title':'标题666'
+        },{
+            'href':'#',
+            'alt':'图片7',
+            'src':'images/picture/7_b.jpg',
+            'smallSrc':'images/picture/7_s.jpg',
+            'title':'标题777'
+        },{
+            'href':'#',
+            'alt':'图片8',
+            'src':'images/picture/8_b.jpg',
+            'smallSrc':'images/picture/8_s.jpg',
+            'title':'标题888'
+        },{
+            'href':'#',
+            'alt':'图片9',
+            'src':'images/picture/9_b.jpg',
+            'smallSrc':'images/picture/9_s.jpg',
+            'title':'标题999'
+        },{
+            'href':'#',
+            'alt':'图片10',
+            'src':'images/picture/10_b.jpg',
+            'smallSrc':'images/picture/10_s.jpg',
+            'title':'标题10101010'
+        },{
+            'href':'#',
+            'alt':'图片11',
+            'src':'images/picture/11_b.jpg',
+            'smallSrc':'images/picture/11_s.jpg',
+            'title':'标题11'
+        },{
+            'href':'www.baidu1.com',
+            'alt':'图片12',
+            'src':'images/picture/12_b.jpg',
+            'smallSrc':'images/picture/12_s.jpg',
+            'title':'标题12'
+        },{
+            'href':'#',
+            'alt':'图片13',
+            'src':'images/picture/13_b.jpg',
+            'smallSrc':'images/picture/13_s.jpg',
+            'title':'标题13'
+        },{
+            'href':'#',
+            'alt':'图片14',
+            'src':'images/picture/14_b.jpg',
+            'smallSrc':'images/picture/14_s.jpg',
+            'title':'标题14'
+        },{
+            'href':'#',
+            'alt':'图片15',
+            'src':'images/picture/15_b.jpg',
+            'smallSrc':'images/picture/15_s.jpg',
+            'title':'标题15'
+        },{
+            'href':'#',
+            'alt':'图片16',
+            'src':'images/picture/16_b.jpg',
+            'smallSrc':'images/picture/16_s.jpg',
+            'title':'标题16'
+        },{
+            'href':'#',
+            'alt':'图片17',
+            'src':'images/picture/17_b.jpg',
+            'smallSrc':'images/picture/17_s.jpg',
+            'title':'标题17'
+        }
+    ]
+    //大图图片信息
+    function img_info(i){
+        var href=img[i].href,
+                alt=img[i].alt,
+                src=img[i].src,
+                title=img[i].title,
+                $main=$('#detailImg-box');
+        $main.find('a').attr({'href':href,'class':'detailImg_'+(i+1)});
+        $main.find('img').attr({'alt':alt,'src':src});
+        $main.find('p').text(title);
+    }
+    function s_a_r(o,c){
+        o.addClass(c).siblings().removeClass(c);
+    }
+    //大图左右点击
+    function i_cur(i,len){
+        i=i%len;
+        if(i<0){
+            i=len+i;
+        }
+        return i;
+    }
+    function detailImg_click($pn,i,len){
+        i_cur(i,len);
+        img_info(i);
+        var imgCur=$('.smallImg_'+(i+1));
+        if(!imgCur.html()){
+            $pn.click();
+        }
+        s_a_r($('.smallImg_'+(i+1)),'cur');//小图选中
+    }
+    //小图左右点击
+    function smallImg_click(a,_a,len,i){
+        _a=a;
+        _a=a%len;
+        if(_a<0){
+            _a+=len;
+        }
+        c=_a==i?'cur':'';
+        s_html(_a,c);
+    }
+    function s_html(_a,c){
+        return h='<li class=\"smallImg_'+(_a+1)+' '+c+'\"><a><img alt=\"'+img[_a].alt+'\" src=\"'+img[_a].smallSrc+'\"></a></li>';
+    }
+</script>
+</html>

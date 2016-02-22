@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>修改头像</title>
+    <link rel="stylesheet" type="text/css" href="../css/public.css" />
+    <link rel="stylesheet" type="text/css" href="../css/list_header.css" />
+    <link rel="stylesheet" type="text/css" href="../css/personal_center.css" />
+    <link rel="stylesheet" type="text/css" href="../css/footer.css" />
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <script>
+        $(function(){
+            $("#onload").click(function(){
+                var fileInput = document.getElementById("files");
+                fileInput.click();
+            });
+        })
+    </script>
+</head>
+<body>
+    <!--*******顶部 header_nav star*****************-->
+    <div id="header_nav">
+        <div class="header_nav">
+            <ul class="nav_box ma_mid clearFix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">学术动态</a></li>
+                <li><a href="#">课题研究</a></li>
+                <li><a href="#">地理资源库</a></li>
+                <li><a href="#">科学论文</a></li>
+                <li><a href="#">地理时空报</a></li>
+                <li><a href="#">学生活动</a></li>
+            </ul>
+            <span>
+               <img src="images/nav_head_pic.png" /><a href="#">注销</a>
+                <!--登录注册----
+                <span class="login" ><a href="#">登录</a><a href="#">注册</a> </span>-->
+            </span>
+        </div>
+    </div>
+
+    <!----------------personal_center --------------------------->
+    <div id="personal_box" class="ma_mid clearFix">
+        <div class="set_left fl">
+            <ul>
+                <li>设置</li>
+                <li class="li_border" ><a href="#" class="active_color">修改头像</a></li>
+                <li><a href="#">修改密码</a></li>
+            </ul>
+        </div>
+        <form class="set_right fr">
+            <div class="head_pic head_pic1 fl">
+                <h2>当前我的头像</h2>
+                <img src="../images/xiugai_head_pic.png"/>
+                <p class="input_sub"><input type="submit" value="保存"/></p>
+            </div>
+            <div class="head_pic head_pic2 fl">
+                <h2>设置我的新头像</h2>
+                <img src="../images/scientific_01.jpg"/>
+                <h3><a href="#"id="onload">上传</a></h3>
+                <input type="file" style="display:none" id="files"/>
+                <p class="input_sub"><input type="reset" value="取消" /></p>
+            </div>
+        </form>
+    </div>
+    <!--******footer 	star********-->
+    <div id="footer">
+        <div class="footer_box">
+            <ul class="about_our ma_mid clearFix">
+                <li><a href="#">CCTV专题报道</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">服务条款</a></li>
+                <li><a href="#">隐私条款</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">招聘求贤</a></li>
+                <li><a href="#">版本更新</a></li>
+            </ul>
+            <div class="contact_box clearFix ma_mid">
+                <ul class="contact_our fl">
+                    <li>联系我们</li>
+                    <li>咨询热线：0755-86716136</li>
+                    <li>创业者服务邮箱：bp@angelclub.com</li>
+                </ul>
+                <ul class="fr">
+                    <li>服务邮箱：ir@angelclub.com</li>
+                    <li>公司地址：四川省成都市</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

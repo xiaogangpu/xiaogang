@@ -1,0 +1,89 @@
+
+/***resource_box  ***/
+#resource_box {
+    width:1000px;
+    height:500px;
+    margin-top:40px;
+}
+/********grade star***************/
+.grade {
+    width:80px;
+    margin-left:10px;
+    border-radius:5px;
+    border:1px solid #bf0000;
+}
+.grade ul {
+    width:100%;
+}
+.grade ul li {
+    width:100%;
+    height:50px;
+    text-align:center;
+    line-height:50px;
+}
+.grade ul .grade_li1 a {
+    color:#bf0000;
+}
+.grade ul li a {
+    font-size:16px;
+    color:#5d5d5d;
+}
+.grade ul li a:hover {
+    color:#bf0000;
+    transition:color 0.2s;
+}
+/****show_list star*********/
+#rs_show_list_box {
+    width:860px;
+    position:relative;
+    border:1px solid #F2F2F2;
+    padding-bottom:150px;
+    margin-bottom: 100px;
+}
+.rs_show_list {
+    width:830px;
+    padding: 10px 20px;
+}
+.rs_show_list li {
+    position:relative;
+    width:100%;
+    padding:15px 0;
+    font-size: 14px;
+    border-bottom:1px dashed #D2D2D2;
+}
+.rs_show_list li a {
+    color:#5d5d5d;
+}
+.rs_show_list li a:hover {
+    color:#bf0000;
+    transition:color 0.5s;
+    text-decoration:underline;
+}
+.rs_show_list li .date {
+    float:right;
+    padding-right: 120px;
+    color:#bfbfbf;
+}
+.rs_show_list li .down{
+    position:absolute;
+    right:0;
+    top:8px;
+    display: block;
+    width:22px;
+    height:30px;
+}
+.rs_show_list li .down a {
+    display: block;
+    width:22px;
+    height:30px;
+    background:url(../images/rs_show_list_bg.png) no-repeat -22px 0;
+}
+.rs_show_list li .down a:hover {
+    background:url(../images/rs_show_list_bg.png) no-repeat 0 0;
+}
+
+
+
+
+
+

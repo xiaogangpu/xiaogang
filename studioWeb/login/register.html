@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<link rel="stylesheet" type="text/css" href="../css/public.css">
+	<link rel="stylesheet" type="text/css" href="../css/header.css">
+	<link rel="stylesheet" type="text/css" href="../css/register.css">
+	<script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+	<title>注册</title>
+	<script>
+		
+		$(function(){
+		//兼容ie显示placeholder
+			if(!placeholderSupport()){   // 判断浏览器是否支持 placeholder
+			    $('[placeholder]').focus(function() {
+			        var input = $(this);
+			        if (input.val() == input.attr('placeholder')) {
+			            input.val('');
+			            input.removeClass('placeholder');
+			        }
+			    }).blur(function() {
+			        var input = $(this);
+			        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+			            input.addClass('placeholder');
+			            input.val(input.attr('placeholder'));
+			        }
+			    }).blur();
+			};
+		//切换login 和regist 效果
+			var $login_inwrap = $(".login_inwrap h1 span");
+			$login_inwrap.eq(1).addClass("login_border")
+			.find("a").addClass("login_color")
+			$login_inwrap.eq(0).find("a").css("color","#5d5d5d")
+
+			$login_inwrap.mouseenter(function(){
+				$(this).addClass("login_border")
+				.siblings().removeClass("login_border");
+				$(this).find("a").css("color","#ec6941");
+				$(this).siblings().find("a").css("color","#5d5d5d");
+			})
+			$login_inwrap.mouseleave(function(){
+				$(this).removeClass("login_border")
+				.find("a").css("color","#5d5d5d")
+				$login_inwrap.eq(1).addClass("login_border")
+				.find("a").css("color","#ec6941")
+
+			})
+				
+			
+		})
+			function placeholderSupport() {
+			    return 'placeholder' in document.createElement('input');
+			}
+
+	</script>
+	
+</head>
+<body>
+	<div id="login_box">
+		<div class="login_wrap">
+			<div class="login_inwrap">
+				<h1>
+					<span><a href="login.html">登录</a></span>
+					<span><a href="#">注册</a></span>
+				</h1>
+				<div class="login_text ma_mid">
+					<input type="text" class="input_text" name="" placeholder="请输入手机号">
+					<input type="text" class="input_text" name="" placeholder="请输入验证码">
+					<div id="code">获取验证码</div>
+					<input type="password" class="input_text" name="" placeholder="请输入密码">
+					<input type="password" class="input_text" name="" placeholder="请再次输入密码">
+					<input type="submit" name="" class="login_submit register_submit" value="注册">
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

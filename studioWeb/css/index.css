@@ -1,0 +1,635 @@
+@charset "utf-8";
+/**************banner 	star***********************/
+.banner {height:600px;overflow:hidden;position:relative;}
+.banner .d1{width:100%;height:600px;display:block;position:absolute;left:0;top:0;}
+.banner .d2{width:100%;height:30px;clear:both;position:absolute;z-index:100;left:0;bottom:25px;}
+.banner .d2 ul{float:left;position:absolute;left:50%;top:0;margin:0 0 0 -96px;display:inline;}
+.banner .d2 li{width:17px;height:15px;overflow:hidden;cursor:pointer;background:url(../images/img1.png) no-repeat center;
+	float:left;margin:0 3px;display:inline;}
+.banner .d2 li.nuw{background:url(../images/img1_1.png) no-repeat center;}
+
+/********content 	star********************/
+#content {
+	width:100%;
+}
+
+.point_more{
+    height: 35px;
+    display: block;
+    line-height: 35px;
+    text-align: right;
+    color: #bf0000;   
+}
+/*-------------title--------------*/
+.title{
+    width: 100%;
+    height: 70px;
+    margin: 0 auto 45px;
+    padding-top:40px;
+}
+
+.title p{
+    color: #000;
+    font-size: 26px;
+    text-align: center;
+    line-height: 24px;
+}
+
+.title p span{
+    color: #808080;
+    font-size: 16px;
+}
+
+.title div{
+    width: 50px;
+    border-bottom: 2px solid #bf0000;
+    margin: 10px auto 7px;
+}
+/*-------------academic--------------*/
+#academic{
+    width: 100%;
+    background: #FFF;
+    margin:0 auto;
+    
+}
+.academic_list{
+    width: 1000px;
+    margin: 0 auto;
+}
+.academic_list ul{
+    list-style: none;
+    margin: 0 auto;
+}
+.academic_list ul li{
+    width:290px;
+    text-align: center; 
+    float:left;
+    margin-left:33px;
+    background:#f7f7f7;
+
+}
+.academic_list ul li img{
+    width:290px;
+    margin-bottom:15px;
+}
+.academic_list ul li a{
+
+}
+.academic_list ul li p a{
+    font-size: 18px;
+    color:#000;  
+}
+.academic_list ul li p+p{
+    text-align:left;
+    height:42px;
+    padding:0 10px;
+}
+.academic_list ul li p+p a{  
+    font-size: 13px;
+    color:#8F8080;
+    margin:20px 0 10px 0;
+}
+.academic_list ul li p+p+p{
+    font-size: 12px;
+    color:#8F8080;
+    text-align:right;
+    padding-bottom:10px;
+}
+.academic_list ul li a:hover{
+    /*color: #9c231a;*/
+}
+#academic .point_more{
+    padding:10px 30px 50px 0;
+}
+/*----------------research----------------*/
+#research{
+    width: 100%;
+    background:#f7f7f7; 
+}
+
+.research_list{
+    width: 1000px;
+    height: 350px;
+    margin: 35px auto 0; 
+}
+
+.research_content{
+    width: 480px;
+    height: 260px;
+    background: #FFF;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    transition: box-shadow 0.5s;
+}
+.research_content:hover {
+	box-shadow: 2px 2px 2px 2px #ccc;
+	transition: box-shadow 0.5s;
+}
+
+.result_title,.communicate_title{
+    width: 400px;
+    height: 50px;
+    margin:0 auto;
+    line-height: 50px;
+    padding-left:50px;
+    border-bottom: 1px solid #d0d0d0;
+}
+
+.result_title span,.communicate_title span{
+    font-size: 22px;
+    color: #000;
+}
+
+.result_title{
+    background: url('../images/research_1.png') no-repeat 10px 10px;
+}
+
+.communicate_title{
+    background: url('../images/research_2.png') no-repeat 10px 10px;
+}
+
+.research_content ul{
+	width:450px;
+    margin:15px auto;
+}
+
+.research_content ul li{
+    list-style: none;
+    height: 30px;
+    line-height: 30px;
+}
+
+.research_content ul li a{
+    color: #3a3a3a;
+}
+.research_content ul li a:hover {
+	color:#bf0000;
+	text-decoration: underline;
+    transition:color .5s;
+}
+
+.research_content ul li span{
+	float:right;
+    color: #848484;
+}
+
+#research .point_more{
+    float:right;
+    margin-right:10px;  
+}
+
+/*----------------database----------------*/
+#database{
+    width: 100%;
+    background:#fff;
+}
+.database_class{
+    width: 1000px;
+    margin: 0 auto;    
+}
+
+.database_class ul{
+    margin: 0 auto;
+}
+
+.database_class ul li{
+    width: 160px;
+    height: 190px;
+    margin: 40px 80px 50px 90px;
+    float: left;
+    background-size: 160px 160px;
+    opacity:1;
+    -webkit-transition:opacity 0.5s;
+    -moz-transition:opacity 0.5s;
+     filter:alpha(opacity=100);
+}
+.database_class ul .data_list1 {
+	 background: url("../images/database_1.png") no-repeat 0 0;
+}
+
+.database_class ul .data_list2{
+    background: url("../images/database_2.png") no-repeat 0 0;
+    background-size: 160px 160px;
+}
+
+.database_class ul .data_list3{
+    background: url("../images/database_3.png") no-repeat 0 0;
+    background-size: 160px 160px;
+}
+
+.database_class ul .data_list4{
+    background: url("../images/database_4.png") no-repeat 0 0;
+    background-size: 160px 160px;
+}
+
+.database_class ul .data_list5{
+    background: url("../images/database_5.png") no-repeat 0 0;
+    background-size: 160px 160px;
+}
+.database_class ul .data_list6{
+    background: url("../images/database_6.png") no-repeat 0 0;
+    background-size: 160px 160px;
+}
+.database_class ul li a{
+    width: 100%;
+    display: inline-block;
+    padding-top: 170px;
+    text-align: center;
+    font-size: 18px;
+    color: #a5a5a5;
+    transition: all 0.5s;
+}
+.database_class ul li a:hover{
+    color: #000;
+}
+
+.database_class ul li:hover {
+    opacity:0.7;
+    -webkit-transition:opacity 0.5s; 
+    -moz-transition:opacity 0.5s;
+    filter:alpha(opacity=70);
+
+}
+
+
+/*----------------scientific----------------*/
+
+#scientific{
+    width: 100%;
+    background:#f7f7f7;
+}
+
+.science_class{
+    width: 1000px;
+    margin: 25px auto 0;
+}
+.science_class ul {
+    width:100%;
+}
+.science_class ul li{
+    width: 400px;
+    height: 230px;
+    margin:0 100px 0 0;
+    list-style: none;
+    float: left;
+}
+
+.balloon{
+    width: 350px;
+    height: 190px;
+    background: #FFF;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    transition:box-shadow 0.5s;
+}
+.balloon:hover {
+	box-shadow: 2px 2px 2px 2px #ccc;
+    transition:box-shadow 0.5s;
+}
+
+.balloon_msg{
+    width: 320px;
+    padding: 10px 0 0 20px;
+}
+
+.balloon_msg p{
+    font-size: 21px;
+    font-weight:500;
+}
+
+.balloon_msg div{
+    display:inline-block;
+    width: 280px;
+    height:100px;
+    text-indent: 2em;
+    margin-top: 20px;
+    font-size: 15px;
+    line-height: 20px;    
+    color: #7d7d7d;
+}
+.balloon_msg div a {
+    color:#5E5E5E;
+    font-size:13px;
+}
+.balloon_msg div a:hover {
+    color:#bf0000;
+    transition:color .5s;
+}
+.balloon_img{
+    position:relative;
+    top:-140px;
+    left:310px;
+    width: 160px;
+    height: 100px;
+}
+.balloon_more{
+    text-align:right;
+    display:block;
+    font-weight:600;
+    color:#b90808;
+}
+.balloon_more a {
+	color:#bf0000;
+}
+
+#scientific .point_more{
+    padding-right:30px;
+}
+/*----------------report---------------*/
+#report{
+    width: 100%;
+    background:#fff;
+}
+.report_class{
+    width: 1000px;
+    margin: 0 auto;    
+}
+
+.report_class ul{
+    margin: 0 auto;
+}
+
+.report_class ul li{
+    width: 280px;
+    height:170px;
+    float: left;
+    background-size: 280px 170px;
+    border-radius:10px;
+ 
+}
+.report_pic{    
+    background-size:cover !important;
+    width: 280px;
+    height:170px;
+    filter: blur(3px);
+    -webkit-filter:blur(3px);
+    -moz-filter:blur(3px);
+    /*-ms-filter: blur(10px);*/
+}
+.report_class ul li+li{
+    background-size: 280px 170px;
+    margin-left:80px;
+}
+
+.report_class ul li+li+li{
+    float:right;
+    background-size: 280px 170px;
+}
+.report_class ul li p{
+    font-size:17px;
+    margin:110px 0 35px 0;
+}
+.report_class ul li span{
+    display:block;
+    font-size:14px;
+}
+.report_class ul li a{
+    width: 280px;
+    height:170px;
+    display: inline-block;
+    text-align: center;
+    color:#fff;
+    transition: color 0.5s;
+    position:relative;
+    top:-240px;
+}
+
+.report_class ul li a:hover{
+    color: #bf0000;
+}
+#report .point_more{
+}
+#report a.point_more:hover{
+    color:#000;
+}
+/*------------student---------------*/
+#student{
+    width: 100%;
+    background:#f7f7f7;
+}
+.student_class{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+.student_class ul{
+    margin: 0 auto;
+}
+
+.student_class ul li{
+    width: 500px;
+    height:200px;
+    float: left;
+}
+
+.student_class ul li img{
+    float:left;
+    width: 150px;
+    height:140px;
+    margin-left:0;
+}
+
+.student_class ul li .student_content {
+    width: 250px;
+    height:140px;
+    padding-left:30px;
+    text-align: left;
+    font-size: 14px;
+    color: #7d7d7d;
+    transition: color 0.5s;
+}
+.student_class ul li .student_content a {
+    display:block;
+    margin:20px 0 15px 0;
+    font-size:20px;
+    color:#5e5e5e;
+}
+.student_class ul li .student_content .student_a {
+    font-size:13px;
+}
+
+.student_class ul li .student_content a:hover{
+    color: #bf0000;
+    transition:color .5s;
+}
+/**------------teacher---------------**/
+#teacher{
+    width: 100%;
+    background:#fff;
+    margin:0 auto;
+    padding-bottom:50px;
+}
+
+.teacher_head{
+    width: 1000px;
+    text-align:left;
+    height:24px;
+    line-height:24px;
+    font-size:19px;
+    margin:0 auto;
+    padding-top:50px;
+    vertical-align:top;
+}
+.teacher_head .point_more {
+    font-size:14px;
+}
+
+.teacher_line{
+    width:5px;
+    height:24px;
+    background:#bf0000;
+    display:block;
+    float:left;
+    margin-right:10px;
+}
+.teacher_item{
+    width: 1000px;
+    margin: 0 auto;
+    clear:both;
+}
+.teacher_item li {
+	float:left;
+	margin-left:50px;
+}
+.teacher_item .teach_info_box{
+	position:relative;
+    width: 200px;
+    height:210px;
+    bottom:10px;
+    text-align:center;
+    font-size:17px;
+    color:#444444;
+    background:#f7f7f7;
+    padding:10px 7px 0;
+}
+
+.teach_info_box .teach_info {
+	position: absolute;
+	left:0;
+	bottom:0;
+	width:90%;
+	height:150px;
+	line-height:1.5em;
+	padding:0 10px;
+}
+
+.teacher_item img{
+    position:relative;
+    z-index: 999;
+    width: 160px;
+    height:160px;
+    background:#f7f7f7;
+    top:60px;
+    left:30px;
+}
+.teacher_item .teach_info_box p+p+p {
+    display:inline-block;
+    text-align:left;
+    text-indent:2em;
+    color:#666666;
+    font-size:12px;
+}
+
+#teacher .point_more{
+    width:180px;
+    display:inline-block;
+    padding-right:13px;
+    text-align:right;
+    float:right;
+}
+/*------------teacher---------------*/
+/*#teacher{*/
+    /*width: 100%;*/
+    /*background:#fff;*/
+    /*margin:0 auto;*/
+    /*padding-bottom:30px;*/
+/*}*/
+
+/*.teacher_head{*/
+    /*width: 1000px;*/
+    /*text-align:left;*/
+    /*height:24px;*/
+    /*line-height:24px;*/
+    /*font-size:19px;*/
+    /*margin:0 auto;*/
+    /*padding-top:50px;*/
+    /*vertical-align:top;*/
+/*}*/
+/*.teacher_head .point_more {*/
+    /*font-size:14px;*/
+/*}*/
+
+/*.teacher_line {*/
+    /*width:5px;*/
+    /*height:24px;*/
+    /*background:#bf0000;*/
+    /*display:block;*/
+    /*float:left;*/
+    /*margin-right:10px;*/
+/*}*/
+/*#teacher_list {*/
+    /*width: 1000px !important;*/
+    /*margin: 0 auto !important;*/
+    /*overflow:hidden;*/
+/*}*/
+/*#teacher_list .teacher_item {*/
+    /*width: 900px;*/
+/*}*/
+/*#teacher_list .teacher_item li {*/
+    /*float:left;*/
+    /*margin-left:0px;*/
+/*}*/
+/*.teacher_item .teach_info_box{*/
+    /*position:relative;*/
+    /*width: 200px;*/
+    /*height:210px;*/
+    /*bottom:10px;*/
+    /*text-align:center;*/
+    /*font-size:17px;*/
+    /*color:#444444;*/
+    /*background:#f7f7f7;*/
+    /*padding:10px 7px 0;*/
+/*}*/
+
+/*.teach_info_box .teach_info {*/
+    /*position: absolute;*/
+    /*left:0;*/
+    /*bottom:0;*/
+    /*width:90%;*/
+    /*height:150px;*/
+    /*line-height:1.5em;*/
+    /*padding:0 10px;*/
+/*}*/
+
+/*.teacher_item img{*/
+    /*position:relative;*/
+    /*z-index: 999;*/
+    /*width: 160px;*/
+    /*height:160px;*/
+    /*background:#f7f7f7;*/
+    /*top:60px;*/
+    /*left:30px;*/
+/*}*/
+/*.teacher_item .teach_info_box p+p+p {*/
+    /*display:inline-block;*/
+    /*text-align:left;*/
+    /*text-indent:2em;*/
+    /*color:#666666;*/
+    /*font-size:12px;*/
+/*}*/
+
+/*#teacher .point_more{*/
+    /*width:180px;*/
+    /*display:inline-block;*/
+    /*text-align:right;*/
+    /*float:right;*/
+    /*font-size:12px;*/
+/*}*/
+
+/*************图片水平动画************************/
+
+
+
+img{ border:none;}
+
+.marquee {width:1000px;height:400px;overflow:hidden;border:1px solid #333; margin-top:20px;}
+.marquee li{ display:inline;}
+.marquee li img {width:160px; height:160px;}

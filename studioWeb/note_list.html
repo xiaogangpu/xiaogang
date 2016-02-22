@@ -1,0 +1,132 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>发帖</title>
+    <link rel="stylesheet" type="text/css" href="css/public.css" />
+    <link rel="stylesheet" type="text/css" href="css/list_header.css" />
+    <link rel="stylesheet" type="text/css" href="css/subject_detailed.css" />
+    <link rel="stylesheet" type="text/css" href="css/note_detail.css" />
+    <link rel="stylesheet" type="text/css" href="css/note_page.css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css" />
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/show_bg.js"></script>
+    <script>
+        $(function () {
+            $(".words ul li:last").css("border-bottom", "none");
+        })
+    </script>
+</head>
+<body>
+<!--*******顶部 header_nav star*****************-->
+    <div id="header_nav">
+        <div class="header_nav">
+            <ul class="nav_box ma_mid clearFix">
+                <li><a href="#">首页</a></li>
+                <li><a href="#">学术动态</a></li>
+                <li><a href="#">课题研究</a></li>
+                <li><a href="#">地理资源库</a></li>
+                <li><a href="#">科学论文</a></li>
+                <li><a href="#">地理时空报</a></li>
+                <li><a href="#">学生活动</a></li>
+            </ul>
+            <span>
+               <img src="images/nav_head_pic.png" /><a href="#">注销</a>
+                <!--登录注册----
+                <span class="login" ><a href="#">登录</a><a href="#">注册</a> </span>-->
+            </span>
+        </div>
+    </div>
+<!--******搜索search star***************-->
+<!--***********列表show list 	star*********************-->
+    <div id="rs_show">
+        <h1 class="clearFix">
+            <span><a href="#">成果展示</a></span>
+            <span><a href="note_list.html">交流研究</a></span>
+        </h1>
+    </div>
+    <div id="studio" class="note">
+        <div class="words">
+            <form class="text note clearFix">
+                <p>论坛</p>
+                <div class="red_line"></div>
+                <span class="title_name">标题:</span>
+                <input type="text" class="text_title" value="" />
+                <textarea class="text_area"></textarea>
+                <input type="submit" value="发布" class="area_sub">
+            </form>
+            <ul>
+                <li class="clearFix">                  
+                    <img src="images/yunwa.png" width="75px" height="75px" />
+                    <div class="words_text fl">                       
+                        <div class="words_content fl">
+                           <span>yunwa</span>
+                            收获颇多，构架思路的梳理，非常棒。
+                        </div>
+                        <p> 2015-1-21</p>
+                    </div>
+                </li>
+                <li class="clearFix">                  
+                    <img src="images/yunwa.png" width="75px" height="75px" />
+                    <div class="words_text fl">                       
+                        <div class="words_content fl">
+                           <span>yunwa</span>
+                            收获颇多，构架思路的梳理，非常棒。
+                        </div>
+                        <p> 2015-1-21</p>
+                    </div>
+                </li>
+                <li class="clearFix">                  
+                    <img src="images/yunwa.png" width="75px" height="75px" />
+                    <div class="words_text fl">                       
+                        <div class="words_content fl">
+                           <span>yunwa</span>
+                            收获颇多，构架思路的梳理，非常棒。
+                        </div>
+                        <p> 2015-1-21</p>
+                    </div>
+                </li>
+            </ul>
+            <div class="page clearFix">
+                <div>
+                    <a class="prev" href="#">上一页</a>
+                    <a class="num" href="#">1</a>
+                    <a class="num" href="#">2</a>
+                    <a class="num" href="#">3</a>
+                    <span class="current">4</span>
+                    <a class="next" href="#">下一页</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+<!--******footer 	star********-->
+    <div id="footer">
+        <div class="footer_box">
+            <ul class="about_our ma_mid clearFix">
+                <li><a href="#">CCTV专题报道</a></li>
+                <li><a href="#">关于我们</a></li>
+                <li><a href="#">服务条款</a></li>
+                <li><a href="#">隐私条款</a></li>
+                <li><a href="#">联系我们</a></li>
+                <li><a href="#">招聘求贤</a></li>
+                <li><a href="#">版本更新</a></li>
+            </ul>
+            <div class="contact_box clearFix ma_mid">
+                <ul class="contact_our fl">
+                    <li>联系我们</li>
+                    <li>咨询热线：0755-86716136</li>
+                    <li>创业者服务邮箱：bp@angelclub.com</li>
+                </ul>
+                <ul class="contact_addr fr">
+                    <li>服务邮箱：ir@angelclub.com</li>
+                    <li>公司地址：四川省成都市中和镇天河路11号</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,107 @@
+@charset "utf-8";
+/************header 	star***********************************/
+#header {
+	width:100%;
+}
+.header_top {
+	width:100%;
+	height:10px;
+	background:#bf0000;
+}
+.header_box {
+	width:1000px;
+	padding-bottom: 15px;
+}
+.logo_box {
+	position:relative;
+	margin-top:10px;
+}
+.logo_box .login_off {
+	position:absolute;
+	top:0;
+	right:60px;
+}
+.login_off img {
+	vertical-align: middle;
+	height:42px;
+	width:42px;
+	border-radius:50%;
+	behavior: url('../js/border-radius.htc');
+}
+.login_off span {
+	padding-left:10px;
+	color:#7d7d7d;
+}
+.login_off a {
+	padding-left:15px;
+	font-size:14px;
+	color:#BF0000;
+}
+.logo img {
+	vertical-align: middle;
+}
+.logo .logo_name {
+	font-weight: bold;
+	margin-left:20px;
+}
+.login_box {
+	width:150px;
+	height:30px;
+	margin-top:10px;
+	line-height:30px;
+	background:#BF0000;
+}
+.login_box .login {
+	padding-top:1px;
+	text-align: center;
+}
+.login_box .login span {
+	width:75px;
+	height:26px;
+	line-height: 26px;
+	margin-top:1px;
+	margin-right:2px;
+	color:#ccc;
+	background:#fff;
+}
+.login > a {
+	color:#fff;
+}
+.login span:hover {
+	opacity: 0.9;
+	filter:alpha(opacity=90);
+}
+.login span a {
+	color:#333;
+}
+/*******nav_box 	star*********************/
+.nav_box {
+	width:100%;
+	margin-top:15px;
+	margin-left:-50px;
+}
+
+.nav_box li {
+	float:left;
+	width:140px;
+	height:30px;
+	line-height: 30px;
+	font-size:16px;
+	font-weight: bold;
+	text-align: center;
+}
+.nav_box li a {
+	color:#404040;
+	transition:all .5s;
+}
+.nav_box li a:hover {
+	padding-bottom:18px;
+	border-bottom: 3px solid #bf0000;
+	color:#bf0000;
+	transition:color .3s;
+}
+.nav_box .active a {
+	padding-bottom:18px;
+	color:#bf0000;
+	border-bottom: 3px solid #bf0000;
+}
