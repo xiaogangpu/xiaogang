@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>h5-different</title>
+    <!--<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">-->
+	<!-- 是否启用 WebApp 全屏模式，删除苹果默认的工具栏和菜单栏 -->
+	<meta name="apple-mobile-web-app-capable" content="yes"/>
+	 <!-- 启用360浏览器的极速模式(webkit) -->
+	<meta name="renderer" content="webkit">
+	 <!-- 避免IE使用兼容模式 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<script type="text/javascript">
+			var width=screen.width;
+			var scale=width/640;
+			document.write("<meta name='viewport'  content='width=640,maximum-scale="+scale+",user-scalable=no'>");
+	</script>
+
+  	<link rel="stylesheet" type="text/css" href="css/index.css">
+</head>
+<body class="page">
+	<header class="clear">
+		<div class="head left">
+			<a href="#" class="par"><img src="images/open@3x.png"  alt="open"></a>
+			<a href="#" class=""><img src="images/return@3x.png" alt="return"></a>
+		</div>
+		<div class="head right">
+			<a href="#" class="par"><img src="images/search@3x.png"  alt="search"></a>
+			<a href="#" class=""><img src="images/shop@3x.png"  alt="shop"></a>
+		</div>
+	</header>
+	<section class="goods">
+		<div class="goodsTab f-tac m-patbL">
+			<h2 class="m-mabN">VERSACE</h2>
+			<h3 class="m-mabN">碎花连衣裙</h3>
+			<p class="tac">￥10086</p>
+		</div>
+		<div class="goodsPic touchslider">
+			<div class="goodsCon f-cb touchslider-viewport" style="overflow: hidden;width: 592px;height: 600px;">
+				<div class="touchslider-item"><img src="images/goods1.png"  width='592px' height="600px" alt="goods1"></div>
+				<div class="touchslider-item"><img src="images/goods2.png"  width='592px' height="600px" alt="goods2"></div>
+				<div class="touchslider-item"><img src="images/goods1.png"  width='592px' height="600px" alt="goods1"></div>
+				<div class="touchslider-item"><img src="images/goods2.png"  width='592px' height="600px" alt="goods2"></div>
+			</div>
+			<div class="sliderNav">
+		        <span class="touchslider-nav-item touchslider-nav-item-current"></span>
+		        <span class="touchslider-nav-item"></span>
+		        <span class="touchslider-nav-item"></span>
+		        <span class="touchslider-nav-item"></span>
+    		</div>
+		</div>
+		<div class="goodsLove tac">
+			<a class=""><img src="images/unlove@2x.png" height="35px" alt="unlove"></a>
+			<a href="#" class=""><img src="images/share@2x.png" height="35px" alt="share"></a>
+		</div>
+		<div class="goodsSize">
+			<ul class="goodsSizeList clear">
+				<li class="list left">IT38</li>
+				<li class="list left">IT40</li>
+				<li class="list left">IT42</li>
+				<li class="list left">IT44</li>
+				<li class="list left">IT46</li>
+				<li class="list left">IT48</li>
+			</ul>
+		</div>
+		<div class="submit">
+			<input type="submit" class="btn mau" value="添加至购物袋">
+			<a href="#" class="mau tac size tdn ">查看尺码表</a>
+		</div>
+		<div class='goodsInfo'>
+			<div class="gInText">
+				<h3 class="gIn">商品描述</h3>
+				<p>该品牌创立于1978年，品牌标识是神话中的个蛇妖美杜莎（Medusa），代表着致命的吸引力。范哲思的设计风格非常鲜明，独特的先锋艺术表征让他风靡全球，他强调快乐与性感，领口常开到腰部以下，汲取了古典贵族风格的豪华,奢丽，又能充分考虑穿着舒适及恰当的显示体型，在考虑不同的人的所需的同时更是一直坚持自己的风格。</p>
+			</div>
+			<div class="gInNum">
+				<h3>商品编号</h3>
+				<ul>
+					<li>NS00100</li>
+				</ul>
+			</div>
+			<div class="gInSize">
+				<h3>尺码指导</h3>
+				<ul>
+					<li><a href="#" class="tdn">查看此商品的尺寸</a></li>
+					<li>符合标准尺码，请选择平时所穿尺码</li>
+				</ul>
+			</div>
+			<div class="gInMore ">
+				<h3>商品信息</h3>
+				<ul>
+					<li>100%聚脂钎维</li>
+					<li>忌水洗</li>
+				</ul>
+			</div>
+			<div class="other">
+				<h3>更多VERSACE</h3>
+				
+				<!--othergoods slider.js-->
+				
+				<div class="page_guide_slider">
+
+				<div class="page_guide_balloon">
+					<div class="page_guide_title">
+						<div class="page_guide_title_text">主题名称</div>
+					</div>
+					<div class="page_guide_pointer">
+						<div class="page_guide_point"></div>
+					</div>
+					<div class="page_guide_bar">
+						<div class="page_guide_progress">
+							<div></div>
+							<div></div>
+							<div></div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="page_guide_container" onMouseDown="pageGuideMousedown(this,event)" onMouseMove="pageGuideMousemove(this,event)" onMouseUp="pageGuideMouseup(this,event)" onMouseOut="pageGuideMouseout(this,event)"  ontouchstart="pageGuideTouchstart(this,event)" ontouchmove="pageGuideTouchmove(this,event)" ontouchend="pageGuideTouchend(this,event)">
+					<div class="page_guide_items">
+						<div id="3_1" class="page_guide_item">
+							<div class="page_guide_item_text">
+								<div class="page_guide_item_intr"><img width="180px" height="300px" src="images/other1.png" /></div>
+							</div>
+							<div class="page_guide_item_image">
+								<img img_src="images/loading.jpg" width="180px" height="300px" src="images/other1.png" />
+								<img img_src="images/loading.jpg" width="180px" height="300px" src="images/other2.png" />
+								<img img_src="images/loading.jpg" width="180px" height="300px" src="images/other1.png" />
+								<img img_src="images/loading.jpg" width="180px" height="300px" src="images/other2.png"/>
+								<img img_src="images/loading.jpg" width="180px" height="300px" src="images/other1.png" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<!--//othergoods slider.js-->
+		</div>
+	</div>
+	</section>
+
+	<script src="js/jquery-2.0.0.min.js"></script>
+	<script src="js/touchSlider.js"></script>  <!--goods slider-->
+	<script src="js/slider.js"></script>   <!--othergoods slider-->
+
+	<script>
+     //	goods slider
+		jQuery(function($) {
+			$('.goodsSize li').eq(0).addClass('activeSize');
+			$('.goodsSize li').hover(function () {
+			    $(this).addClass('activeSize').siblings('li').removeClass('activeSize');
+			});
+		    $(".touchslider").touchSlider({
+		        container: this,
+		        duration: 350, // 动画速度
+		        delay: 3000, // 动画时间间隔
+		        margin: 5,
+		        mouseTouch: true,
+		        namespace: "touchslider",
+		        pagination: ".touchslider-nav-item",
+		        currentClass: "touchslider-nav-item-current", // current 样式指定
+		        autoplay: false, // 自动播放
+		        viewport: ".touchslider-viewport"
+		    });		
+	});
+	</script>
+</body>
+</html>
